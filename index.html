@@ -160,7 +160,7 @@
     <div class="container">
         <div class="header">
             <h1>Privacy Policy</h1>
-            <p>Rite Attendance App | Effective Date: May 19, 2026</p>
+            <p>Rite Attendance App | Effective Date: September 9, 2026</p>
         </div>
 
         <div class="section">
@@ -174,12 +174,25 @@
             <ul>
                 <li><strong>User Identifiers:</strong> We collect a unique User ID (e.g., student roll number) and email address for account authentication and maintaining accurate attendance records.</li>
                 <li><strong>Bluetooth & Proximity Data:</strong> Rite uses Bluetooth Low Energy (BLE) to detect secure classroom hardware emitters. This is required to verify physical proximity for attendance. We do not track, collect, or request GPS location data.</li>
-                <li><strong>Camera and Facial Embeddings:</strong> The app accesses your device camera solely to verify identity during attendance marking. The app generates a mathematical facial embedding (vector) to match against your registration record. We do not store, upload, or share raw photographic images of your face.</li>
+                <li><strong>Camera and Facial Data:</strong> The app accesses your device camera solely to verify identity during attendance marking. See Section 3, "Facial Recognition (Biometric) Data," for a complete explanation of what is collected, how it is used, secured, retained, and shared.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>3. Data Storage and Administrative Access</h2>
+            <h2>3. Facial Recognition (Biometric) Data</h2>
+            <p>Because facial data is sensitive, we document its handling separately and in full here.</p>
+            <ul>
+                <li><strong>What we collect:</strong> When you register or mark attendance, your device's camera captures a live image of your face <em>on your device only</em>. That image is processed locally, on-device, to generate a mathematical facial embedding (a numerical vector). Only this embedding is sent to our servers &mdash; the raw photographic image itself is never uploaded, transmitted, or stored, and is discarded from device memory immediately after the embedding is generated.</li>
+                <li><strong>Irreversibility:</strong> A facial embedding is a one-way mathematical representation of your face's features. It cannot be reverse-engineered, decoded, or otherwise used to reconstruct a photographic image of your face.</li>
+                <li><strong>How it is used:</strong> Your stored embedding is compared against a newly generated embedding at the moment you mark attendance, solely to verify that the person marking attendance is you. It is not used for any other purpose (e.g., no analytics, profiling, advertising, or surveillance).</li>
+                <li><strong>Storage and encryption:</strong> Facial embeddings are encrypted with AES-256-GCM before being written to our database, in addition to being encrypted in transit (TLS) between the app and our servers. Only our backend verification service holds the decryption key; embeddings are never stored or transmitted in plain, usable form.</li>
+                <li><strong>Sharing:</strong> Facial embedding data is never shared, sold, rented, transferred, or disclosed to any third party, for any purpose, under any circumstances. It is used exclusively, internally, for attendance verification within the app.</li>
+                <li><strong>Retention and deletion:</strong> Your facial embedding is retained for as long as your account remains active with your institution. It is not automatically deleted on any fixed schedule. You may request permanent deletion at any time by contacting your institutional administrator (see Section 6); once processed, the embedding is permanently and irrecoverably removed from our database.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Data Storage and Administrative Access</h2>
             <ul>
                 <li><strong>Files and Documents:</strong> The app generates attendance reports in CSV format.</li>
                 <li><strong>Restricted Access:</strong> Access to these generated reports, including the ability to download or export them, is strictly restricted to authorized institutional Administrators. Students do not have access to export these files.</li>
@@ -187,28 +200,28 @@
         </div>
 
         <div class="section">
-            <h2>4. Data Security and Sharing</h2>
+            <h2>5. Data Security and Sharing</h2>
             <ul>
-                <li><strong>Encryption:</strong> All user data (including identifiers and embeddings) transmitted between the app and our database is encrypted in transit.</li>
-                <li><strong>No Third-Party Sharing:</strong> We do not sell, rent, or share any collected user data with third-party tracking, advertising, or marketing networks. Data is used exclusively for institutional attendance functionality.</li>
+                <li><strong>Encryption:</strong> All user data transmitted between the app and our database is encrypted in transit. Facial embeddings receive an additional layer of encryption at rest &mdash; see Section 3 for details.</li>
+                <li><strong>No Third-Party Sharing:</strong> We do not sell, rent, or share any collected user data with third-party tracking, advertising, or marketing networks, or with any other third party. Data is used exclusively for institutional attendance functionality.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>5. User Rights and Data Deletion</h2>
+            <h2>6. User Rights and Data Deletion</h2>
             <ul>
-                <li><strong>Required Data:</strong> The collection of User IDs, embeddings, and Bluetooth proximity signals is strictly required for the app's core functionality.</li>
-                <li><strong>Deletion Requests:</strong> You may contact your institutional administrator to request data modification or complete deletion of your attendance records and embedded profile data in accordance with college policy.</li>
+                <li><strong>Required Data:</strong> The collection of User IDs, facial embeddings, and Bluetooth proximity signals is strictly required for the app's core functionality.</li>
+                <li><strong>Deletion Requests:</strong> You may contact your institutional administrator to request data modification or complete deletion of your attendance records and facial embedding data in accordance with college policy. See Section 3 for facial-data-specific retention and deletion details.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>6. Changes to This Privacy Policy</h2>
+            <h2>7. Changes to This Privacy Policy</h2>
             <p>We may update our Privacy Policy periodically. We will notify users of any material changes by updating the "Effective Date" at the top of this document.</p>
         </div>
 
         <div class="section">
-            <h2>7. Contact Us</h2>
+            <h2>8. Contact Us</h2>
             <p>If you have any questions regarding privacy while using the Application, please contact us via email at <a href="mailto:devclubiiitdm@gmail.com">devclubiiitdm@gmail.com</a>.</p>
         </div>
     </div>
